@@ -49,10 +49,15 @@ const catstagramPost = {
 function renderCatstagramPost(postData) {
     return `
         <div data-postid="${postData.id}">
+            <img src="${postData.image}" />    
+            <p>${postData.caption}</p>
+            <div>${postData.numberOfLikes}</div>
            <!-- ***** ADD EXTRA HTML HERE **** -->
         </div>
     `;
 }
+var htmlString = renderCatstagramPost(catstagramPost);
+document.body.innerHTML += htmlString; 
 
 
 /************
@@ -75,3 +80,15 @@ const advert = {
     description: "Nullam sagittis. Praesent venenatis metus at tortor pulvinar varius. Morbi mattis ullamcorper velit. Praesent turpis."
 };
 
+function renderAdvert(advertData) {
+    return `
+        <article data-advertid="${advertData.id}">
+            <h2>${advertData.title}</h2>
+            <div>${advertData.price}</div>
+            <p>${advertData.description}</p>
+        </article>
+    `
+}
+
+var htmlString = renderAdvert(advert);
+document.body.innerHTML += htmlString; 

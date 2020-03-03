@@ -94,3 +94,18 @@ const advert = [{
     description: "Metus at tortor pulvinar varius. Morbi mattis ullamcorpers."
 }];
 
+function renderAdvert(advert) {
+    return `
+        <article data-advertid="${advertData.id}">
+            <h2>${advertData.title}</h2>
+            <div>${advertData.price}</div>
+            <p>${advertData.description}</p>
+        </article>
+    `
+}
+
+var htmlString = advert
+    .map(renderAdvert)
+    .join("");
+
+document.body.innerHTML += htmlString; 

@@ -14,3 +14,9 @@
 // 6. Output the mapped HTML in the browser.
 // 
 // 7. BONUS TASK - use array.filter to only show characters that are alive.
+
+function renderCharacter() {
+    return `
+        
+    `
+}

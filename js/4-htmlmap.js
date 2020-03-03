@@ -39,10 +39,14 @@ const paragraphs = [
 ];
 
 // function to convert from data to HTML string
+function renderParagraph(text) {
+    return `<p>${text}</p>`;
+}
 /*** ADD THE FUNCTION HERE ***/
 
 // create HTML from the data
 var htmlString = paragraphs
+    .map(renderParagraph)
     /*** CALL THE MAP FUNCTION WITH renderParagraph ***/
     // *** IMPORTANT - don't forget to join the array into a SINGLE string ***
     .join("");
@@ -71,10 +75,16 @@ const images = [{
 
 // function to convert from data to HTML string
 /*** ADD THE FUNCTION HERE ***/
-
+function renderImage(image) {
+    return `<img src="${image.source}" alt="${image.alternativeText}" />`;
+}
 
 // create HTML from the data
-var htmlString = "";
+var htmlString = images 
+    .map(renderImage)
+    .join("");
+
+;
     /*** CALL THE MAP FUNCTION WITH renderParagraph ***/
     // *** IMPORTANT - don't forget to join the array into a SINGLE string ***
 
